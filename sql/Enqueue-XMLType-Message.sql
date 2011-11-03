@@ -8,7 +8,7 @@ DECLARE
 BEGIN 
  
   message := sys.XMLType.createXML('<sample>hello world</sample>');
-  DBMS_AQ.ENQUEUE( queue_name => 'q_history', 
+  DBMS_AQ.ENQUEUE( queue_name => 'q_sample', 
                    enqueue_options => queue_options, 
                    message_properties => message_properties, 
                    payload => message, 
